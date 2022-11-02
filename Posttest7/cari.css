@@ -1,0 +1,29 @@
+form {
+    width:300px;
+    float: right;
+}
+input[type="text"] {
+    width: 50%;
+    padding: 0.5rem 0.8rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    outline: 0;
+    transition: border 0.15s;
+}
+input[type="text"]:focus{
+    border: 1px solid #1dbcfd;
+
+}
+
+main form button {
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 7px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: 30%;
+}
+

@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Signika&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+section{
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+header{
+    background-color:var(--primary-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+input[type='checkbox'] {
+    display: none;
+}
+
+input[type='checkbox']:checked ~ .bar{
+    transform: rotate(45deg);
+    top: 0;
+}
+
+input[type='checkbox']:checked ~ .bar::before{
+    transform: rotate(-90deg);
+    top: 0;
+}
+
+input[type='checkbox']:checked ~ ul{
+    display:flex;
+}
+
+header .logo{
+    font-size: 1.5rem;
+    color:var(--secondary-color);
+    font-weight: 500;
+}
+
+header ul {
+    display:flex;
+}
+
+header ul li{
+    list-style: none;
+    margin-left: 2rem;
+}
+
+header ul li a {
+    position: relative;
+    text-decoration: none;
+    color:var(--secondary-color);
+}
+
+header ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--secondary-color);
+    transition: 0.1 linear;
+}
+
+header ul li a:hover::before,
+header ul li a:active::before {
+    width: 50%;
+}
+
+.bar{
+    display: none;
+    position: relative;
+    top: 5px;
+    width: 30px;
+    height: 2px;
+    background-color: var(--secondary-color);
+}
+
+.bar::before{
+    content: '';
+    position: absolute;
+    top: -10px;
+    width: 30px;
+    height: 2px;
+    background-color: var(--secondary-color);
+}
+
+body {
+    align-items: left;
+}
+
+.crudmain{
+    position: relative;
+    background: var(--trird-color);
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+.crudmain h1{
+    text-align: center;
+    color: black;
+}
+
+main {
+    position: relative;
+    background: var(--trird-color);
+    width: 100vw;
+    height: 100vh;
+    padding-left: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+main h1{
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+main h2{
+    font-size: 5rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+} 
+
+.footer{
+    width: 100%;
+    height: 50px;
+    padding-left: 10px;
+    line-height: 50px;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    position: absolute;
+    text-align: center;
+    bottom: 0px;
+}
+
+:root{
+    --primary-color: black;
+    --secondary-color: white;
+    --trird-color: url('gambar2.jpg') no-repeat center center / cover;
+}
+
+
+.light-theme{
+    --primary-color: white;
+    --secondary-color: black;
+    --trird-color: url('gambar2.jpg') no-repeat center center / cover;
+}
+
+
+#icon{
+    width: 30px;
+    cursor: pointer;
+}
+
+.contact .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact .row .content{
+    padding: 4rem;
+}
+
+.contact .row form{
+    padding: 2rem;
+    margin-left: 2rem;
+    margin-bottom: 4rem;
+}
+
+.contact .row form .box{
+    font-size: 1.2rem;
+    border-color: black;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    background: #3333;
+    color: #fff;
+    text-transform: none;;
+    width: 75%;
+    height: 10px;
+}
+
+.contact .row form label{
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 1rem 0;
+}
+
+.contact .row form .message{
+    height: 10rem;
+    resize: none;
+}
+
+.contact .row .box::placeholder{
+    text-transform: capitalize;
+    color: white;
+}
+
+.contact .row .content .title{
+    text-transform: uppercase;
+    color:#fff;
+    font-size: 2rem;
+}
+
+.contact .row .content .info h3{
+    display: flex;
+    align-items: left;
+    color: black;
+    font-weight: normal;
+    padding-top:1rem;
+}
+
+.btn{
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    width: 25%;
+    padding:.2rem 1rem;
+    color: white;
+    cursor: pointer;
+    font-size: 1.1rem;
+    border-radius: 1rem;
+}
+
+.btn i{
+    padding:0 .5rem;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 1000px) {
+    header{
+        padding: 20px 50px;
+    }
+
+    main{
+        padding-left: 5vw;
+    }
+}
+
+
+@media (max-width: 700px){
+    header{
+        padding: 20px 20px;
+    }
+
+    main h1{
+        font-size: 1rem;
+        font-weight: 200;
+        letter-spacing: 1px;
+    }
+
+    main h2{
+        font-size: 2rem;
+        font-weight: 300;
+        letter-spacing: 1px;
+    }
+
+    header ul{
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 35vh;
+        top: 60px;
+        left: 0;
+        z-index: 100;
+        background-color: var(--secondary-color);
+    }
+
+    header ul li{
+        margin: 1rem;
+    }
+
+    header ul li a{
+        color: var(--primary-color);
+    }
+
+    header ul li a::before{
+        background-color: var(--primary-color);
+    }
+
+    .bar{
+        display: block;
+    }
+}
